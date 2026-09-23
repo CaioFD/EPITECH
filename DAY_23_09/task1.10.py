@@ -1,4 +1,3 @@
-print("Hello World" * 10)
-print("===================")
-text = "Hello World again!"
-print((text + "\n") * 10)
+text = "Hello World!"
+for i in range(10):
+    print(text)

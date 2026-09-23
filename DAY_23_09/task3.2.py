@@ -1,5 +1,4 @@
 number = input("Type a number: ")
-
 try:
     value = int(number)
 except ValueError:
