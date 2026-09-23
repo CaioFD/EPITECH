@@ -1,0 +1,1 @@
+print("tutu on the tuki-kata".replace("tu", "ta"))
