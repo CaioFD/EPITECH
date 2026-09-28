@@ -1,0 +1,7 @@
+def f1():
+    return 42
+def f2(x):
+    return 2 * x
+print(f1(), f2(5) + f1())   
+#will return 42 and 52
+#42 + 10
