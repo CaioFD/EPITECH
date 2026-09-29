@@ -7,7 +7,7 @@ numbers = [random.randint(0, 1000000) for _ in range(1000000)]
 print(f"List created in {time.time() - start:.2f} s")
 
 sort_start = time.time()
-numbers.sort()          # Python's built-in sort (Timsort, written in C)
+numbers.sort()        
 print(f"List sorted in {time.time() - sort_start:.2f} s")
 
 print("First 10:", numbers[:10])
