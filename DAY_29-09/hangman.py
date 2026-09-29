@@ -11,9 +11,6 @@ YELLOW = "\033[33m"
 BLUE = "\033[34m"
 RESET = "\033[0m"
 
-os.system("")  # turns on colors in the old Windows terminal (does nothing elsewhere)
-
-
 def get_args():
     # Options
     parser = argparse.ArgumentParser(description="Hangman in the terminal")
@@ -77,7 +74,7 @@ def play(args):
             print(f"{YELLOW}Please type only letters.{RESET}")
             continue
 
-        if len(guess) == 1:                  # guessing one letter
+        if len(guess) == 1:              # guessing one letter
             if guess in found:
                 print(f"{YELLOW}'{guess}' was already found{RESET}")
             elif guess in wrong:             # repeated wrong letter: no penalty
