@@ -10,11 +10,23 @@ YELLOW = "\033[33m"
 BLUE = "\033[34m"
 RESET = "\033[0m"
 
+# Task 3.3: themes and their words
+THEMES = {
+    "fruits": ["apple", "banana", "cherry", "grape", "lemon", "mango",
+               "orange", "peach", "pear", "pineapple", "strawberry", "kiwi"],
+    "animals": ["cat", "dog", "horse", "tiger", "zebra", "rabbit", "monkey",
+                "giraffe", "dolphin", "penguin", "elephant", "kangaroo"],
+    "code": ["python", "function", "variable", "loop", "string", "integer",
+             "boolean", "keyboard", "compiler", "recursion", "argument", "module"],
+}
+# Harder theme = more penalties allowed ("custom" = words from -f, bonus 0)
+THEME_BONUS = {"fruits": 0, "animals": 1, "code": 2, "english": 3}
+
 def get_args():
     # Options
     parser = argparse.ArgumentParser(description="Hangman in the terminal")
-    parser.add_argument("-p", "--penalties", type=int, default=12,
-                        help="max penalties before losing (default: 12)")
+    parser.add_argument("-p", "--penalties", type=int,
+                        help="max penalties before losing (default: depends on theme and word)")
     parser.add_argument("-l", "--length", type=int,
                         help="length of the word to guess")
     parser.add_argument("-f", "--file",
@@ -40,26 +52,58 @@ def pick_word(words, length):
     return random.choice(words).upper()
 
 
-def show(word, found, wrong, penalties):
+def show(word, found, wrong, penalties, theme, limit):
     # Found letters in green, the others hidden as "_"
     hidden = " ".join(GREEN + c + RESET if c in found else "_" for c in word)
-    label = "penalty" if penalties <= 1 else "penalties"
-    print(f"{hidden} / {BLUE}{penalties} {label}{RESET}")
+    print(f"Theme: {BLUE}{theme}{RESET} | {hidden} / {BLUE}{penalties}/{limit} penalties{RESET}")
     if wrong:
         print(f"Wrong letters: {RED}{', '.join(sorted(wrong))}{RESET}")
 
 
+def choose_theme():
+    names = list(THEMES) + ["english"]
+    print("Themes:", ", ".join(names), "or random")
+    while True:
+        choice = input("Choose a theme: ").strip().lower()
+        if choice == "random":
+            return random.choice(names)
+        if choice in names:
+            return choice
+        print(f"{YELLOW}Unknown theme.{RESET}")
+
+
+def theme_words(theme):
+    if theme == "english":
+        return load_words(None)           
+    return THEMES[theme]
+
+
+def max_penalties(word, theme):
+    # Task 3.3 difficulty formula: 8 + half the word length + theme bonus
+    return 8 + len(word) // 2 + THEME_BONUS.get(theme, 0)
+
+
 def play(args):
-    word = pick_word(load_words(args.file), args.length)
+    if args.file:
+        theme = "custom"                     # words from the -f file
+        words = load_words(args.file)
+    else:
+        theme = choose_theme()
+        words = theme_words(theme)
+
+    word = pick_word(words, args.length)
     if word is None:
         print(f"{RED}No word matches these options.{RESET}")
         return
+
+    # -p wins if given, otherwise the difficulty formula decides
+    limit = args.penalties if args.penalties else max_penalties(word, theme)
 
     found = set()   # letters guessed that ARE in the word
     wrong = set()   # letters guessed that are NOT in the word
     penalties = 0
     start = time.time()
-    show(word, found, wrong, penalties)
+    show(word, found, wrong, penalties, theme, limit)
 
     while True:
         guess = input("$> ").strip().upper()
@@ -97,11 +141,11 @@ def play(args):
             print(f"{GREEN}{word}: You found it! - {penalties} penalties{RESET}")
             return
 
-        if penalties >= args.penalties:
+        if penalties >= limit:
             print(f"{RED}You lose! The word was {word}{RESET}")
             return
 
-        show(word, found, wrong, penalties)
+        show(word, found, wrong, penalties, theme, limit)
 
 
 # Options are read once and reused for every new game
