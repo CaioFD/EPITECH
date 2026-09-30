@@ -52,8 +52,7 @@ def load_words():
 
 
 def shuffle_letters(word):
-    # Fisher-Yates shuffle, done by hand (random.shuffle is not allowed)
-    letters = list(word)
+    letters = list(word)  #apple => ['a', 'p'...]  
     for i in range(len(letters) - 1, 0, -1):
         j = random.randint(0, i)                         # random position from 0 to i
         letters[i], letters[j] = letters[j], letters[i]  # swap the two letters
@@ -61,7 +60,6 @@ def shuffle_letters(word):
 
 
 def scramble(word):
-    # Shuffle again until the result is different from the original
     mixed = shuffle_letters(word)
     while mixed == word:
         mixed = shuffle_letters(word)
@@ -80,6 +78,5 @@ def play():
         attempts -= 1
         print(f"Wrong! Attempts left: {attempts}")
     print(f"You lose! The word was {word.upper()}")
-
 
 play()

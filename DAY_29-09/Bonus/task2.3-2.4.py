@@ -125,7 +125,7 @@ def play(args):
 # Task 2.4: scoreboard functions
 def win_rate(history):
     if not history:
-        return 0                     # no game played: avoid dividing by zero
+        return 0                     
     wins = sum(1 for game in history if game["won"])
     return wins / len(history) * 100
 
@@ -133,7 +133,7 @@ def win_rate(history):
 def average_penalties_won(history):
     won = [game["penalties"] for game in history if game["won"]]
     if not won:
-        return None                  # no game won: no average
+        return None                  
     return sum(won) / len(won)
 
 
@@ -155,9 +155,8 @@ def print_stats(history):
         print(f"Longest word found: {longest_word_found(history)}")
 
 
-# Options are read once and reused for every new game
 args = get_args()
-history = []                                 # one dict per game
+history = []                                
 while True:
     result = play(args)
     if result is not None:

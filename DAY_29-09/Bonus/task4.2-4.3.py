@@ -7,7 +7,6 @@ DIRECTIONS = [(0, 1), (1, 0), (1, 1), (1, -1)]   # right, down, diagonal \, diag
 
 
 def win_length(rows, cols):
-    # Winning rule for any size: line up min(rows, cols, 4) marks
     return min(rows, cols, 4)
 
 
@@ -44,7 +43,7 @@ def free_cells(board):
 def ask_move(board, player):
     rows, cols = len(board), len(board[0])
     while True:
-        move = input(f"Player {player}, type row and column (e.g. 1 3): ").split()
+        move = input(f"Player {player}, type row and column (Example:. 1 3): ").split()
         if len(move) != 2 or not all(m.isdigit() for m in move):
             print("Invalid move: type two numbers.")
             continue
@@ -68,15 +67,15 @@ def minimax(board, turn, k):
         return 0
     scores = []
     for r, c in cells:
-        board[r][c] = turn                        # try the move...
+        board[r][c] = turn                        
         scores.append(minimax(board, HUMAN if turn == BOT else BOT, k))
-        board[r][c] = EMPTY                       # ...then undo it
+        board[r][c] = EMPTY                       
     return max(scores) if turn == BOT else min(scores)
 
 
 def bot_move(board, k):
     cells = free_cells(board)
-    if len(board) * len(board[0]) <= 9:          # 3x3: unbeatable bot
+    if len(board) * len(board[0]) <= 9:       
         best_score, best = -2, None
         for r, c in cells:
             board[r][c] = BOT
@@ -85,7 +84,7 @@ def bot_move(board, k):
             if score > best_score:
                 best_score, best = score, (r, c)
         return best
-    # Bigger boards: win if possible, else block the human, else random
+    
     for p in (BOT, HUMAN):
         for r, c in cells:
             board[r][c] = p

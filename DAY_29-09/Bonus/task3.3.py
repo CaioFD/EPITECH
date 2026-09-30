@@ -10,7 +10,7 @@ YELLOW = "\033[33m"
 BLUE = "\033[34m"
 RESET = "\033[0m"
 
-# Task 3.3: themes and their words
+
 THEMES = {
     "fruits": ["apple", "banana", "cherry", "grape", "lemon", "mango",
                "orange", "peach", "pear", "pineapple", "strawberry", "kiwi"],
@@ -19,7 +19,7 @@ THEMES = {
     "code": ["python", "function", "variable", "loop", "string", "integer",
              "boolean", "keyboard", "compiler", "recursion", "argument", "module"],
 }
-# Harder theme = more penalties allowed ("custom" = words from -f, bonus 0)
+
 THEME_BONUS = {"fruits": 0, "animals": 1, "code": 2, "english": 3}
 
 def get_args():
@@ -79,13 +79,12 @@ def theme_words(theme):
 
 
 def max_penalties(word, theme):
-    # Task 3.3 difficulty formula: 8 + half the word length + theme bonus
     return 8 + len(word) // 2 + THEME_BONUS.get(theme, 0)
 
 
 def play(args):
     if args.file:
-        theme = "custom"                     # words from the -f file
+        theme = "custom"                     
         words = load_words(args.file)
     else:
         theme = choose_theme()
@@ -96,11 +95,10 @@ def play(args):
         print(f"{RED}No word matches these options.{RESET}")
         return
 
-    # -p wins if given, otherwise the difficulty formula decides
     limit = args.penalties if args.penalties else max_penalties(word, theme)
 
-    found = set()   # letters guessed that ARE in the word
-    wrong = set()   # letters guessed that are NOT in the word
+    found = set()   
+    wrong = set()   
     penalties = 0
     start = time.time()
     show(word, found, wrong, penalties, theme, limit)

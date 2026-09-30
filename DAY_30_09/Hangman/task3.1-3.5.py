@@ -7,7 +7,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Hangman")
 
 # Task 3.4
-background = pygame.image.load("DAY_30-09/assets/background.jpg").convert()
+background = pygame.image.load("assets/background.jpg").convert()
 background = pygame.transform.scale(background, (WIDTH, HEIGHT))
 
 

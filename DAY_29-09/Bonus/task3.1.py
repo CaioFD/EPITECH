@@ -30,7 +30,7 @@ def bot_guess(candidates, tried, pattern):
     # Whole word only when just 1 letter is missing (and the bot knows the word)
     if pattern.count("_") == 1 and len(candidates) == 1:
         return candidates[0]
-    # Sometimes the bot "makes a mistake" and picks a random untried letter
+    
     untried = [c for c in "abcdefghijklmnopqrstuvwxyz" if c not in tried]
     if random.random() < BOT_MISTAKE_CHANCE:
         return random.choice(untried)
@@ -69,7 +69,7 @@ def show(word, found, tried, penalties):
 
 def play(words):
     # One duel on the same secret word, turn by turn; returns the winner
-    word = random.choice([w for w in words if 5 <= len(w) <= 8])
+    word = random.choice([w for w in words if 4 <= len(w) <= 8])
     found = set()
     tried = set()                          # letters tried by BOTH players
     penalties = {"You": 0, "Bot": 0}
@@ -106,7 +106,7 @@ def play(words):
             penalties[player] += 5
             print(f"{RED}{player}: {guess.upper()} is wrong (+5 penalties){RESET}")
 
-        if penalties[player] >= MAX_PENALTIES:
+        if penalties[player] > MAX_PENALTIES:
             print(f"{RED}{player} reached {MAX_PENALTIES} penalties! The word was {word.upper()}{RESET}")
             return other
 

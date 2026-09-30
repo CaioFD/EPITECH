@@ -12,7 +12,6 @@ def ask_secret(name):
 
 
 def play_round(word, name):
-    # One game of hangman; returns the penalties of the guesser
     found = set()
     wrong = set()
     penalties = 0
@@ -49,12 +48,12 @@ def play_round(word, name):
 
 
 names = [input("Player 1 name: "), input("Player 2 name: ")]
-scores = [0, 0]                              # total penalties of each player
+scores = [0, 0]                            
 
 for r in range(1, ROUNDS + 1):
     print(f"\n===== Round {r} =====")
     for chooser in (0, 1):
-        guesser = 1 - chooser                # the other player (0 <-> 1)
+        guesser = 1 - chooser      # the other player (0 <-> 1)
         secret = ask_secret(names[chooser])
         scores[guesser] += play_round(secret, names[guesser])
     print(f"Score: {names[0]} {scores[0]} - {names[1]} {scores[1]} penalties")
