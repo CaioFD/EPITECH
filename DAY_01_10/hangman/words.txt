@@ -1,0 +1,6 @@
+python
+banana
+computer
+keyboard
+hangman
+epitech
