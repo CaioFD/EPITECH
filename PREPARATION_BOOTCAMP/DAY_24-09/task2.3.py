@@ -1,0 +1,3 @@
+for number in range (10000, 0 ,-1):
+  if number % 7 == 0:
+    print(number)
