@@ -1,0 +1,101 @@
+.box {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 0 10px;
+    background-color: white;
+}
+
+body {
+    background-color: grey;
+}
+
+.content {
+    display: flex;
+}
+
+main {
+    flex: 4;
+}
+
+aside {
+    flex: 1;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+.moving_square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: move_square 5s 5;
+}
+
+@keyframes move_square {
+    0%   { transform: translate(0, 0);         background-color: red; }
+    25%  { transform: translate(0, 300px);     background-color: green; }
+    50%  { transform: translate(300px, 300px); background-color: blue; }
+    75%  { transform: translate(300px, 0);     background-color: yellow; }
+    100% { transform: translate(0, 0);         background-color: red; }
+}
+
+/* ---- Task09 ---- */
+html {
+    background-color: white;
+}
+
+body {
+    padding-bottom: 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+header {
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+nav a:hover {
+    background-color: cornflowerblue;
+}
+
+.content {
+    align-items: stretch;
+}
+
+main > p,
+form {
+    border: 2px solid black;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+form button {
+    grid-column: 2;
+}
+
+input[type="radio"],
+input[type="color"] {
+    justify-self: start;
+}
+
+footer {
+    text-align: center;
+}
+
+.moving_square {
+    position: absolute; /* keeps the square from stretching the main box */
+}

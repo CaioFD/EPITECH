@@ -1,0 +1,27 @@
+.box {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 0 10px;
+    background-color: white;
+}
+
+body {
+    background-color: grey;
+}
+
+.content {
+    display: flex;
+}
+
+main {
+    flex: 4; 
+}
+
+aside {
+    flex: 1;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}

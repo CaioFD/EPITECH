@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodingPedia</title>
+    <link rel="stylesheet" href="codingpedia.css">
+</head>
+<body>
+    <header class="box">
+        <h1>SQL</h1>
+        <nav class="box">
+            <ul>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="php.html">PHP</a></li>
+                <li><a href="sql.html">SQL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <main class="box">
+            <article>
+                <h2>Description</h2>
+                <p><abbr title="Structured Query Language">SQL</abbr> is a domain-specific language used to manage data held in a relational database management system. <!-- TODO: paste the first Wikipedia paragraph here --></p>
+            </article>
+            <article>
+                <table>
+                    <caption>Course planning</caption>
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Description</th>
+                            <th>Grade obtained</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SQL 101</td>
+                            <td>A quick introduction to the SQL language</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>SQL join</td>
+                            <td>Discovery of JOIN to combine rows from multiple tables</td>
+                            <td>13</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h2>My comments</h2>
+                <ul>
+                    <li>Readable, close to plain English.</li>
+                    <li>The standard for relational databases.</li>
+                    <li>JOINs take some practice.</li>
+                </ul>
+            </article>
+            <article>
+                <h2>Code examples</h2>
+                <pre><code>SELECT name, email FROM users WHERE age &gt;= 18;
+
+SELECT u.name, o.total
+FROM users u
+JOIN orders o ON o.user_id = u.id;</code></pre>
+            </article>
+        </main>
+        <aside class="box">
+            <blockquote>
+                <p>
+                    Peace is a lie, there is only passion.<br>
+                    Through passion, I gain strength.<br>
+                    Through strength, I gain power.<br>
+                    Through power, I gain victory.<br>
+                    Through victory, my chains are broken.<br>
+                    The Force shall free me.
+                </p>
+            </blockquote>
+            <p>&mdash; <cite>Sith Code</cite></p>
+        </aside>
+    </div>
+    <footer class="box">
+        <address>
+            Caio, Diniz -
+            Address xxxxx -
+            <a href="tel:+9999999">+99 9 99 99 99 99</a>
+        </address>
+    </footer>
+</body>
+</html>

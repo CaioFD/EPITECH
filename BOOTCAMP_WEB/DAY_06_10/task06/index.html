@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodingPedia</title>
+    <link rel="stylesheet" href="codingpedia.css">
+</head>
+<body>
+    <header class="box">
+        <h1>Welcome to CodingPedia!</h1>
+        <nav class="box">
+            <ul>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="php.html">PHP</a></li>
+                <li><a href="sql.html">SQL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="box">
+        <p>
+            CodingPedia is a collective encyclopedia project on the Internet aiming to be universal and multi-lingual which functions as a wiki.<br>
+            CodingPedia has for goal to offer freely reusable objective and verifiable content that anyone can modify and improve.
+        </p>
+        <form method="get">
+            <label for="first_name">First name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+            <label for="last_name">Last name:</label>
+            <input type="text" id="last_name" name="last_name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="3" max="99">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" minlength="10" maxlength="10">
+            <label for="male">Sex - male:</label>
+            <input type="radio" id="male" name="sex" value="male" checked>
+            <label for="female">Sex - female:</label>
+            <input type="radio" id="female" name="sex" value="female">
+            <label for="hair_color">Hair color:</label>
+            <input type="color" id="hair_color" name="hair_color">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="technology">Technology:</label>
+            <select id="technology" name="technology">
+                <option value="php">PHP</option>
+                <option value="sql">SQL</option>
+            </select>
+            <label for="question">Question:</label>
+            <textarea id="question" name="question" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <aside class="box">
+        <p>Hello there! I am Caio, a student doing my web bootcamp.</p>
+    </aside>
+    <footer class="box">
+        <address>
+            Caio, Diniz -
+            Address xxxxx -
+            <a href="tel:+9999999">+99 9 99 99 99 99</a>
+        </address>
+    </footer>
+</body>
+</html>
