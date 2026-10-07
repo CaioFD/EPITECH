@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.2.2/dist/css/materialize.min.css">
+</head>
+<body class="grey lighten-3">
+
+    <!-- Step A -->
+    <div class="indigo darken-2 center-align">
+        <h1 class="white-text">DINIZ CAIO</h1>
+        <h4 class="grey-text white">Heading</h4>
+    </div>
+
+    <!-- Step B / C / D -->
+    <div class="container">
+        <div class="row">
+            <h2 class="center-align">About me</h2>
+
+            <div class="col s12 m4">
+                <h4 class="center-align">Story</h4>
+                <p class="flow-text">
+                    I am a software engineering student focused on web development.
+                    I have been building applications with JavaScript, TypeScript and
+                    Angular, and I enjoy working on both front-end interfaces and
+                    back-end APIs.
+                </p>
+            </div>
+
+            <div class="col s12 m4 indigo darken-2">
+                <h4 class="center-align white-text">Profile</h4>
+                <div class="card indigo darken-1">
+                    <div class="card-content white-text center-align">
+                        <img class="responsive-img circle" src="https://picsum.photos/200" alt="profile picture">
+                        <p>Web developer, always learning something new.</p>
+                    </div>
+                    <div class="card-action center-align">
+                        <a href="https://github.com/">GitHub</a>
+                        <a href="https://www.linkedin.com/">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <h4 class="center-align">Skills</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Skill</th>
+                            <th>Comment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="grey lighten-2">
+                            <td>HTML / CSS</td>
+                            <td>Daily use, responsive layouts</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>Comfortable with ES6+</td>
+                        </tr>
+                        <tr class="grey lighten-2">
+                            <td>TypeScript</td>
+                            <td>Used in Angular projects</td>
+                        </tr>
+                        <tr>
+                            <td>Angular</td>
+                            <td>Main front-end framework</td>
+                        </tr>
+                        <tr class="grey lighten-2">
+                            <td>Node.js</td>
+                            <td>REST APIs with Express</td>
+                        </tr>
+                        <tr>
+                            <td>SQL</td>
+                            <td>PostgreSQL and MySQL</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Step E -->
+        <div class="row">
+            <h2 class="center-align">Portfolio</h2>
+            <div class="col s12 m4"><img class="responsive-img" src="https://picsum.photos/id/1/600/400" alt="project 1"></div>
+            <div class="col s12 m4"><img class="responsive-img" src="https://picsum.photos/id/2/600/400" alt="project 2"></div>
+            <div class="col s12 m4"><img class="responsive-img" src="https://picsum.photos/id/3/600/400" alt="project 3"></div>
+        </div>
+
+        <div class="row">
+            <h2 class="center-align">Last projects</h2>
+            <div class="col s12 m4"><img class="responsive-img" src="https://picsum.photos/id/4/600/400" alt="last project 1"></div>
+            <div class="col s12 m4"><img class="responsive-img" src="https://picsum.photos/id/5/600/400" alt="last project 2"></div>
+            <div class="col s12 m4"><img class="responsive-img" src="https://picsum.photos/id/6/600/400" alt="last project 3"></div>
+        </div>
+
+        <!-- Step F -->
+        <div class="row">
+            <h2 class="center-align">Contact</h2>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="lastname" type="text">
+                            <label for="lastname">Lastname</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="firstname" type="text">
+                            <label for="firstname">Firstname</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="message" class="materialize-textarea" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row center-align">
+                        <button class="btn indigo darken-2" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.2.2/dist/js/materialize.min.js"></script>
+</body>
+</html>
