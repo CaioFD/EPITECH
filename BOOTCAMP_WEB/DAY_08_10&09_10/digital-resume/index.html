@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caio Faria Diniz — Digital Resume</title>
+  <meta name="description" content="Digital resume of Caio Faria Diniz, Computer Science student and developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="progress-bar" id="scrollProgress"></div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar" aria-label="Primary">
+      <a href="#hero" class="logo">CD<span class="logo-dot">.</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+      </div>
+      <div class="container hero-content">
+        <p class="hero-eyebrow reveal">Hello, I'm</p>
+        <h1 class="hero-title reveal">Caio Faria Diniz</h1>
+        <p class="hero-role reveal">
+          <span id="typedRole" class="typed"></span><span class="cursor" aria-hidden="true">|</span>
+        </p>
+        <p class="hero-location reveal">📍 Contagem, MG — Brazil</p>
+        <div class="hero-actions reveal">
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+          <a href="assets/CV-CaioDiniz-EN.pdf" class="btn btn-ghost" download>Download CV</a>
+        </div>
+        <div class="hero-socials reveal">
+          <a href="https://linkedin.com/in/caiofdiniz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+          <a href="https://github.com/CaioFD" target="_blank" rel="noopener noreferrer" aria-label="GitHub">gh</a>
+          <a href="mailto:caiodiniz200204@gmail.com" aria-label="Email">@</a>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="title-index">01.</span> About Me</h2>
+        <div class="about-grid">
+          <p class="about-text reveal">
+            Computer Science student with a strong interest in technology, innovation, and the development
+            of intelligent and scalable solutions. Solid programming skills in Python, Java, C, C# and C++,
+            with experience in full-stack development, web and mobile application development
+            (Flutter, Android), and software engineering.
+          </p>
+          <p class="about-text reveal">
+            My academic and applied projects gave me hands-on experience in artificial intelligence, letting
+            me apply theoretical concepts to real problems. I bring a proactive, analytical and results-driven
+            mindset, foundational knowledge in information security, and a strong focus on teamwork, clear
+            communication and technical rigor — always aiming to contribute to impactful, collaborative projects.
+          </p>
+          <div class="about-stats reveal">
+            <div class="stat-card">
+              <span class="stat-number" data-count="3">0</span>
+              <span class="stat-label">Internships</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="3">0</span>
+              <span class="stat-label">Languages spoken</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="2027">0</span>
+              <span class="stat-label">Graduation year</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="title-index">02.</span> Skills</h2>
+
+        <div class="skills-grid">
+          <div class="skill-block reveal">
+            <h3>Programming Languages</h3>
+            <ul class="bar-list">
+              <li><span class="bar-label">Python</span><span class="bar-track"><span class="bar-fill" style="--level:90%"></span></span></li>
+              <li><span class="bar-label">Java</span><span class="bar-track"><span class="bar-fill" style="--level:80%"></span></span></li>
+              <li><span class="bar-label">C / C++</span><span class="bar-track"><span class="bar-fill" style="--level:80%"></span></span></li>
+              <li><span class="bar-label">C#</span><span class="bar-track"><span class="bar-fill" style="--level:85%"></span></span></li>
+              <li><span class="bar-label">Flutter</span><span class="bar-track"><span class="bar-fill" style="--level:75%"></span></span></li>
+            </ul>
+          </div>
+
+          <div class="skill-block reveal">
+            <h3>Tools &amp; Platforms</h3>
+            <div class="tag-cloud">
+              <span class="tag">Git</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">Azure</span>
+              <span class="tag">Azure DevOps</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Jira</span>
+              <span class="tag">Trello</span>
+              <span class="tag">RabbitMQ</span>
+            </div>
+          </div>
+
+          <div class="skill-block reveal">
+            <h3>Languages</h3>
+            <ul class="bar-list">
+              <li><span class="bar-label">Portuguese</span><span class="bar-track"><span class="bar-fill" style="--level:100%"></span></span></li>
+              <li><span class="bar-label">English</span><span class="bar-track"><span class="bar-fill" style="--level:95%"></span></span></li>
+              <li><span class="bar-label">French (Learning)</span><span class="bar-track"><span class="bar-fill" style="--level:25%"></span></span></li>
+            </ul>
+          </div>
+
+          <div class="skill-block reveal">
+            <h3>Soft Skills</h3>
+            <div class="tag-cloud">
+              <span class="tag tag-accent">Logical &amp; analytical thinking</span>
+              <span class="tag tag-accent">Leadership</span>
+              <span class="tag tag-accent">Teamwork</span>
+              <span class="tag tag-accent">Continuous learning</span>
+              <span class="tag tag-accent">Creative thinking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="title-index">03.</span> Experience</h2>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Apr. 2024 — Apr. 2025</span>
+              <h3>Project Engineering Intern</h3>
+              <p class="timeline-company">Century Telecom · Voice Corporate Team · Contagem, Brazil</p>
+              <ul>
+                <li>Implementation of voice systems including analog technologies, R2 Digital, and SIP PBX solutions.</li>
+                <li>Worked in the networking area using PHIPAM, SUMMIT, and Multi PuTTY Manager.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Sep. 2025 — Dec. 2025</span>
+              <h3>Software Development Intern</h3>
+              <p class="timeline-company">Group Software · RHTECH Team · Belo Horizonte, Brazil</p>
+              <ul>
+                <li>Developed and maintained web and mobile applications for the Human Resources sector.</li>
+                <li>Implemented features, fixed bugs, tested, and monitored deployment cycles.</li>
+                <li>Collaborated with the team on continuous improvements in performance and usability.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Feb. 2026 — Sept. 2026</span>
+              <h3>Software Development Intern</h3>
+              <p class="timeline-company">Localiza · Asset Regularization and Legal Team · Belo Horizonte, Brazil</p>
+              <ul>
+                <li>Developed and maintained back-end applications using C# and .NET Core.</li>
+                <li>Built and deployed applications with Docker and Kubernetes; managed workflows via Azure DevOps.</li>
+                <li>Applied Gitflow best practices and contributed to event-driven architectures using RabbitMQ and Event Sourcing.</li>
+                <li>Actively participated in agile ceremonies following the Scrum methodology.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="title-index">04.</span> Education</h2>
+
+        <div class="edu-grid">
+          <div class="edu-card reveal">
+            <span class="edu-date">02/2023 — Expected 12/2026</span>
+            <h3>Bachelor's Degree in Computer Science</h3>
+            <p>Pontifical Catholic University of Minas Gerais — Morning Program · Belo Horizonte, Brazil</p>
+          </div>
+          <div class="edu-card reveal">
+            <span class="edu-date">09/2026 — 01/2027</span>
+            <h3>Exchange Program</h3>
+            <p>Epitech · Paris, France</p>
+          </div>
+        </div>
+
+        <h3 class="sub-heading reveal">Additional Education</h3>
+        <div class="chips reveal">
+          <span class="chip">Object-Oriented Programming with Java — ITA · 2024</span>
+          <span class="chip">Power BI Fundamentals — Fundação Bradesco · 2024</span>
+          <span class="chip">Advanced Java Programming Language — Fundação Bradesco · 2023</span>
+          <span class="chip">Complete Web Development — Udemy (João Ribeiro) · 2023</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="title-index">05.</span> Get in Touch</h2>
+        <p class="contact-intro reveal">
+          Open to new opportunities and collaborations. Feel free to reach out!
+        </p>
+
+        <div class="contact-grid">
+          <ul class="contact-info reveal">
+            <li><strong>Phone</strong><a href="tel:+5531991005956">+55 (31) 99100-5956</a></li>
+            <li><strong>Email</strong><a href="mailto:caiodiniz200204@gmail.com">caiodiniz200204@gmail.com</a></li>
+            <li><strong>LinkedIn</strong><a href="https://linkedin.com/in/caiofdiniz" target="_blank" rel="noopener noreferrer">linkedin.com/in/caiofdiniz</a></li>
+            <li><strong>GitHub</strong><a href="https://github.com/CaioFD" target="_blank" rel="noopener noreferrer">github.com/CaioFD</a></li>
+          </ul>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required minlength="2">
+              <span class="form-error" data-error-for="name"></span>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+              <span class="form-error" data-error-for="email"></span>
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What is this about?" required minlength="3">
+              <span class="form-error" data-error-for="subject"></span>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message..." required minlength="10"></textarea>
+              <span class="form-error" data-error-for="message"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              <span class="btn-text">Send Message</span>
+            </button>
+
+            <p class="form-success" id="formSuccess" role="status" aria-live="polite">
+              ✓ Thanks! Your message has been noted (demo form — no server attached).
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> Caio Faria Diniz — Built with HTML, CSS &amp; JavaScript.</p>
+      <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
