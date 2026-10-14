@@ -1,0 +1,11 @@
+body { font-family: Arial, Helvetica, sans-serif; margin: 40px; }
+form { margin-bottom: 15px; }
+
+#itemList { list-style: disc; padding-left: 20px; }
+#itemList li { margin: 8px 0; padding: 6px; border: 2px solid transparent; }
+
+#itemList li.note { border-color: blue; }
+#itemList li.email { border-color: green; }
+#itemList li.todo { border-color: red; }
+
+.hidden { display: none; }

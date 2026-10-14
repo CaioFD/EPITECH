@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 15</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Task 15</h1>
+
+  <form id="itemForm">
+    <input type="text" id="itemText" placeholder="Your text...">
+    <select id="itemType">
+      <option value="note">note</option>
+      <option value="email">email</option>
+      <option value="todo">todo</option>
+    </select>
+    <input type="text" id="itemTags" placeholder="tags (comma separated)">
+    <button type="submit">Add</button>
+  </form>
+
+  <form id="searchForm">
+    <label>Types (ctrl+click for several):</label>
+    <select id="searchTypes" multiple size="3">
+      <option value="note">note</option>
+      <option value="email">email</option>
+      <option value="todo">todo</option>
+    </select>
+    <input type="text" id="searchWords" placeholder="words (comma = OR)">
+    <label><input type="checkbox" id="searchNot"> not containing</label>
+    <input type="text" id="searchTags" placeholder="with tags (comma)">
+    <input type="text" id="searchWithoutTags" placeholder="without tags (comma)">
+    <button type="submit">Search</button>
+    <button type="button" id="resetSearch">Reset</button>
+  </form>
+
+  <ul id="itemList"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -19,7 +19,10 @@
 
   <header class="site-header" id="siteHeader">
     <nav class="navbar" aria-label="Primary">
-      <a href="#hero" class="logo">CD<span class="logo-dot">.</span></a>
+      <a href="#hero" class="logo">
+        <img src="assets/profile.jpg" alt="Caio Faria Diniz" class="logo-pic">
+        <span class="logo-name">Caio Diniz</span>
+      </a>
 
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
         <span></span><span></span><span></span>
@@ -37,6 +40,10 @@
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme" title="Toggle theme">
         <span class="theme-icon" aria-hidden="true">🌙</span>
       </button>
+
+        <div class="hero-actions reveal">
+          <a href="assets/CV-CaioDiniz-EN.pdf" class="btn btn-ghost" download>Download CV</a>
+        </div>
     </nav>
   </header>
 
@@ -49,21 +56,24 @@
         <span class="blob blob-2"></span>
       </div>
       <div class="container hero-content">
-        <p class="hero-eyebrow reveal">Hello, I'm</p>
-        <h1 class="hero-title reveal">Caio Faria Diniz</h1>
-        <p class="hero-role reveal">
-          <span id="typedRole" class="typed"></span><span class="cursor" aria-hidden="true">|</span>
-        </p>
-        <p class="hero-location reveal">📍 Contagem, MG — Brazil</p>
-        <div class="hero-actions reveal">
-          <a href="#contact" class="btn btn-primary">Get in touch</a>
-          <a href="assets/CV-CaioDiniz-EN.pdf" class="btn btn-ghost" download>Download CV</a>
+        <div class="hero-text">
+          <p class="hero-eyebrow reveal">Hello, I'm</p>
+          <h1 class="hero-title reveal">Caio Faria Diniz</h1>
+          <p class="hero-role reveal">
+            <span id="typedRole" class="typed"></span><span class="cursor" aria-hidden="true">|</span>
+          </p>
+          <p class="hero-location reveal">Belo Horizonte, MG — Brazil</p>
+          <div class="hero-actions reveal">
+            <a href="#contact" class="btn btn-primary">Get in touch</a>
+            <a href="assets/CV-CaioDiniz-EN.pdf" class="btn btn-ghost" download>Download CV</a>
+          </div>
+          <div class="hero-socials reveal">
+            <a href="https://linkedin.com/in/caiofdiniz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+            <a href="https://github.com/CaioFD" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+            <a href="mailto:caiodiniz200204@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 12.5 4 6.01V6h16zM4 18V8.24l7.4 5.55a1 1 0 0 0 1.2 0L20 8.24V18H4z"/></svg></a>
+          </div>
         </div>
-        <div class="hero-socials reveal">
-          <a href="https://linkedin.com/in/caiofdiniz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-          <a href="https://github.com/CaioFD" target="_blank" rel="noopener noreferrer" aria-label="GitHub">gh</a>
-          <a href="mailto:caiodiniz200204@gmail.com" aria-label="Email">@</a>
-        </div>
+        <img src="assets/profile.jpg" alt="Caio Faria Diniz" class="hero-photo reveal">
       </div>
       <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
         <span></span>
@@ -172,12 +182,14 @@
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <span class="timeline-date">Apr. 2024 — Apr. 2025</span>
-              <h3>Project Engineering Intern</h3>
-              <p class="timeline-company">Century Telecom · Voice Corporate Team · Contagem, Brazil</p>
+              <span class="timeline-date">Feb. 2026 — Sept. 2026</span>
+              <h3>Software Development Intern</h3>
+              <p class="timeline-company">Localiza · Asset Regularization and Legal Team · Belo Horizonte, Brazil</p>
               <ul>
-                <li>Implementation of voice systems including analog technologies, R2 Digital, and SIP PBX solutions.</li>
-                <li>Worked in the networking area using PHIPAM, SUMMIT, and Multi PuTTY Manager.</li>
+                <li>Developed and maintained back-end applications using C# and .NET Core.</li>
+                <li>Built and deployed applications with Docker and Kubernetes; managed workflows via Azure DevOps.</li>
+                <li>Applied Gitflow best practices and contributed to event-driven architectures using RabbitMQ and Event Sourcing.</li>
+                <li>Actively participated in agile ceremonies following the Scrum methodology.</li>
               </ul>
             </div>
           </div>
@@ -199,17 +211,17 @@
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <span class="timeline-date">Feb. 2026 — Sept. 2026</span>
-              <h3>Software Development Intern</h3>
-              <p class="timeline-company">Localiza · Asset Regularization and Legal Team · Belo Horizonte, Brazil</p>
+              <span class="timeline-date">Apr. 2024 — Apr. 2025</span>
+              <h3>Project Engineering Intern</h3>
+              <p class="timeline-company">Century Telecom · Voice Corporate Team · Contagem, Brazil</p>
               <ul>
-                <li>Developed and maintained back-end applications using C# and .NET Core.</li>
-                <li>Built and deployed applications with Docker and Kubernetes; managed workflows via Azure DevOps.</li>
-                <li>Applied Gitflow best practices and contributed to event-driven architectures using RabbitMQ and Event Sourcing.</li>
-                <li>Actively participated in agile ceremonies following the Scrum methodology.</li>
+                <li>Implementation of voice systems including analog technologies, R2 Digital, and SIP PBX solutions.</li>
+                <li>Worked in the networking area using PHIPAM, SUMMIT, and Multi PuTTY Manager.</li>
               </ul>
             </div>
           </div>
+
+
         </div>
       </div>
     </section>
@@ -300,6 +312,11 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <p>&copy; <span id="year"></span> Caio Faria Diniz — Built with HTML, CSS &amp; JavaScript.</p>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/caiofdiniz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+        <a href="https://github.com/CaioFD" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+        <a href="mailto:caiodiniz200204@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 12.5 4 6.01V6h16zM4 18V8.24l7.4 5.55a1 1 0 0 0 1.2 0L20 8.24V18H4z"/></svg></a>
+      </div>
       <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
     </div>
   </footer>
